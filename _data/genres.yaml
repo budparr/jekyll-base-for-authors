@@ -1,4 +1,5 @@
-- Fiction
-- Nonfiction
-- Poetry
-- Theater
+genre: 
+  - Fiction
+  - Nonfiction
+  - Poetry
+  - Theater
