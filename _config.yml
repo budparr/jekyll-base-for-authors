@@ -61,11 +61,15 @@ collections:
   landing_pages:
     output: true
     permalink: '/:path/'
+  events:
+    output: false
   books:
     output: true
     permalink: '/:collection/:path/'
-  events:
+  genres:
     output: false
+    permalink: '/:collection/:path/'
+
 defaults:
   - scope:
       path: ''
