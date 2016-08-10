@@ -18,6 +18,13 @@ owner: Herman Melville
 short_name: Herman Melville
 display: fullscreen
 
+bindings:
+  - hardcover: Hardcover
+  - paperback: Paperback
+  - ebook: Ebook
+  - special: Special Edition
+
+
 # development meta data
 image_url: http://thenewdynamic.imgix.net
 google_analytics_id: UA-xxxxx-4
