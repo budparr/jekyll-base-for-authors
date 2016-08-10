@@ -22,14 +22,13 @@ display: fullscreen
 image_url: http://thenewdynamic.imgix.net
 google_analytics_id: UA-xxxxx-4
 version: 3.0.3
-incremental: true
+incremental: false
 #port: 3575
 
 
 # Settings
 production: false
 bust_css_cache: false
-full_rebuild: true
 timezone: Etc/Zulu
 # compress_html:
 #   ignore:
