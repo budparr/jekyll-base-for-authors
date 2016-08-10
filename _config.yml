@@ -92,3 +92,11 @@ defaults:
     values:
       layout: page-single
       schema: BlogPosting
+  - scope:
+      path: ''
+      type: books
+    values:
+      layout: book
+      schema: BlogPosting
+      _comments:
+        date: live on site date
