@@ -18,11 +18,16 @@ owner: Herman Melville
 short_name: Herman Melville
 display: fullscreen
 
+# bindings:
+#   - hardcover: Hardcover
+#   - paperback: Paperback
+#   - ebook: Ebook
+#   - special: Special Edition
 bindings:
-  - hardcover: Hardcover
-  - paperback: Paperback
-  - ebook: Ebook
-  - special: Special Edition
+  - hardcover
+  - paperback
+  - ebook
+  - special
 
 
 # development meta data
