@@ -1,10 +1,10 @@
 # jekyll-seo-tag
-title: "Min Jin Lee"
-description: "Official Author site for Min Jin Lee, author of Free Food for Millionaires and Pachinko"
-url: "http://www.minjinlee.com" # the base hostname & protocol for your site
+title: "Herman Melville"
+description: "Official Author site for Herman Melville"
+url: "http://www.jekyll-base-for-authors-thenewdynamic.com" # the base hostname & protocol for your site
 author: []
 twitter:
-  username: minjinlee
+  username: therealhermanmelville
 facebook:
   app_id: 
   publisher: 
@@ -15,7 +15,7 @@ github:
   username: budparr
 owner: Min Jin Lee
 # manifest
-short_name: Min Jin Lee
+short_name: Herman Melville
 display: fullscreen
 
 # development meta data
