@@ -3,7 +3,7 @@ title: "Moby Dick, or The Whale"
 date: 2016-08-04T03:12:00.000Z
 publication_date: 2017-02-07T12:00:00.000Z
 category: Fiction
-description: "_Moby-Dick_ is the story of an eerily compelling madman pursuing an unholy war against a creature as vast and dangerous and unknowable as the sea itself. But more than just a novel of adventure, more than an encyclopedia of whaling lore and legend, Moby-Dick is a haunting, mesmerizing, and important social commentary populated with several of the most unforgettable and enduring characters in literature."
+description_html: "_Moby-Dick_ is the story of an eerily compelling madman pursuing an unholy war against a creature as vast and dangerous and unknowable as the sea itself. But more than just a novel of adventure, more than an encyclopedia of whaling lore and legend, Moby-Dick is a haunting, mesmerizing, and important social commentary populated with several of the most unforgettable and enduring characters in literature."
 editions:
   - hardcover: 9780143124672
   - paperback: 9780451532282
