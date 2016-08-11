@@ -8,7 +8,7 @@ layout: default
   {% for object in books limit: 1 %}
     {% assign editions = object.editions %}
     {% assign review = object.reviews[0] %}
-    {% assign list_classes = 'block md-inline-block lg-inline-block btn btn-outline gray border-silver m2' %}
+    {% assign list_classes = ' block md-inline-block lg-inline-block btn btn-outline gray border-silver m2' %}
 
     <div class="md-col lg-col col-12 md-col-5 lg-col-5">
       <blockquote class="lede m0">
@@ -19,10 +19,6 @@ layout: default
       </div>
       <div class="my4 col-12 clearfix gray">
         {% include books/buy-links.html classes=list_classes %}
-
-        
-
-
       </div>
     </div>
 
