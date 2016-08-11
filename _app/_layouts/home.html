@@ -12,13 +12,17 @@ layout: default
 
     <div class="md-col lg-col col-12 md-col-5 lg-col-5">
       <blockquote class="lede m0">
-        {{ review.copy_markdown | markdownify }}
+        “{{ review.copy_markdown | markdownify | remove: '<p>' | remove: '</p>' }}”
       </blockquote>
       <div class="black bold h5">
         — {{ review.attribution | markdownify | remove: '<p>' | remove: '</p>' }}
       </div>
       <div class="my4 col-12 clearfix gray">
         {% include books/buy-links.html classes=list_classes %}
+
+        
+
+
       </div>
     </div>
 
