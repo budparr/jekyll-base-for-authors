@@ -8,6 +8,7 @@
 @import 'modules/_accessibility';
 @import 'modules/_borders';
 @import 'modules/_expandable';
+@import 'modules/_grid-auto';
 @import 'modules/_iframes';
 @import 'modules/_layout';
 @import 'modules/_padding';
@@ -21,9 +22,11 @@
 @import 'modules/_fonts';
 @import 'modules/_media-queries';
 /*@import 'modules/_debug';*/
+
 @media (--breakpoint-x-lg) {
   .xlg-wide {
     width: 500px;
     max-width: 80%;    
   }
 }
+a.btn { margin-bottom:.5em }
