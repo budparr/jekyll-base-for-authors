@@ -5,6 +5,7 @@
     {% if pubdate < current_unix_date %}buy{% else %}preorder{% endif %} <em>{{ item.name }}</em> from these retailers
   </h5>
   
+  {% comment %}<!-- do ebooks separate from other types -->{% endcomment %}
   <div class="mb2">    
     {% for edition in editions %}
       {% if forloop.first %}Available editions: {% endif %}
@@ -19,8 +20,10 @@
     <br />
   {% endif %}
 
-  {% for edition in editions limit:1 %}    
-    <div class="mb2">
+  <div class="mb2">
+    {% comment %}<!-- we only need buttons for the top-most edition, because buttons will usually lead to all editions -->{% endcomment %}    
+    {% for edition in editions limit:1 %}    
+    
       {% assign binding = edition.binding %}
       {% assign isbn = edition.isbn %}
       {% if binding == 'paperback' or binding == 'hardcover' and isbn != '' %}        
@@ -32,14 +35,17 @@
         </a>
         <span id='isbn10_{{ isbn }}'></span><!--  pulls in 10 digit ASIN for -->
         {% include books/buy-links-isbn10to13.js %}      
-      {% endif %}
-     </div>    
-  {% endfor %}
-    {% if editions.binding.ebook  %}
+      {% endif %}  
+    {% endfor %}
+  
+    {% comment %}<!-- do ebooks separate from other types -->{% endcomment %}
+    {% assign ebook =  editions | where_exp: "item", "item.binding == 'ebook'"  %}
     
-        <a href="http://itunes.apple.com/us/book/isbn{{ isbn }}" target="_blank" class="{{ binding }} {{ include.classes }}">
-          Apple iBooks
-        </a>
-  {% endif %}
+    {% if ebook[0].isbn  %}    
+      <a href="http://itunes.apple.com/us/book/isbn{{ ebook[0].isbn }}" target="_blank" class="{{ ebook[0].binding }} {{ include.classes }}">
+        Apple iBooks
+      </a>
+    {% endif %}
+  </div>      
 
 </div>
