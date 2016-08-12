@@ -9,7 +9,7 @@ editions:
     isbn: 9780974607801
 reviews:
   - attribution: "The New Yorker"
-    copy_markdown: "I’ve always been haunted by Bartleby, the proto-slacker. But it’s the handsomely minimalist cover of the Melville House edition that gets me here, one of many in the small publisher’s fine ‘Art of the Novella’ series."
+    copy_markdown: ""
 cover_image_path: /uploads/delete-cover-bartleby.jpeg
 ---
 Academics hail it as the beginning of modernism, but to readers around the world—even those daunted by Moby-Dick—Bartleby the Scrivener is simply one of the most absorbing and moving novellas ever. Set in the mid-19th century on New York City’s Wall Street, it was also, perhaps, Herman Melville’s most prescient story: what if a young man caught up in the rat race of commerce finally just said, “I would prefer not to”?
