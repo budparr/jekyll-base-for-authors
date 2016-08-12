@@ -10,11 +10,6 @@ layout: default
 {% assign editions = page.editions %}
 {% assign pubdate = page.publication_date | date: "%Y%m%d" %}
 {% assign editions = page.editions %}
-
-
-<div class="has-layout layout-single-column">
- <article class="hentry {% if page.class %}{{page.class}}{% endif %}">
+ <article class="hentry{% if page.class %} {{page.class}}{% endif %}{{ site.base-layout-classes-wide }} clearfix mb4">
    {% include books/layout.html %}
  </article>
-</div>
-
