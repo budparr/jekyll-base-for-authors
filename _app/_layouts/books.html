@@ -2,8 +2,6 @@
 layout: default
 ---
 {% assign books = site.books | sort: 'publication_date' | reverse  %}
-
-<div class="has-layout layout-single-column">
   {% for object in books  %}
     {% assign title = object.title %}
     {% assign content = object.content %}
@@ -15,9 +13,9 @@ layout: default
     {% assign editions = object.editions %}
     {% assign pubdate = object.publication_date | date: "%Y%m%d" %}
     {% assign editions = object.editions %}
-    <article class="hentry {% if page.class %}{{page.class}}{% endif %}" style="margin-bottom:5em;">
+    <article class="hentry{% if page.class %} {{page.class}}{% endif %}{{ site.base-layout-classes-wide }}" style="margin-bottom:5em;">
       {% include books/layout.html %}
     </article>
   {% endfor %}
-</div>
-{% include mailing-list-signup.html %}
+
+

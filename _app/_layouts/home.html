@@ -2,7 +2,6 @@
 layout: default
 ---
 {% assign books = site.books | sort: 'publication_date' | reverse %}
-{% assign list_classes = ' btn btn-outline col-12 sm-col-auto md-col-auto lg-col-auto mb2 gray border-silver' %}
 
 <div class="lg-col-9 mx3 lg-mx-auto clearfix my2 lg-my4">
 
@@ -24,7 +23,9 @@ layout: default
 
     <div class="md-col lg-col col-12 md-col-5 lg-col-5 lg-ml4 mb4">
       {% if object.cover_image_path %}
-        <img src="{{ object.cover_image_path }}" alt="" class="box-shadow-large-black transition" />
+        <a href="{{ object.url }}">
+          <img src="{{ object.cover_image_path }}" alt="" class="box-shadow-large-black transition" />
+        </a>
       {% endif %}      
     </div>
   {% endfor %}

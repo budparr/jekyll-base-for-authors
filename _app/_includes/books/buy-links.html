@@ -14,7 +14,7 @@
   </div>
   
   {% if page.distributor_link %}
-    <a href="{{ page.distributor_link }}" target="_blank" class="{{ edition.type }} {{ include.classes }}">
+    <a href="{{ page.distributor_link }}" target="_blank" class="{{ edition.type }} {{ site.button-classes }}">
       Buy {% if page.distributor %}{{ page.distributor }}{% endif %}
     </a>
     <br />
@@ -27,10 +27,10 @@
       {% assign binding = edition.binding %}
       {% assign isbn = edition.isbn %}
       {% if binding == 'paperback' or binding == 'hardcover' and isbn != '' %}        
-        <a href="http://www.indiebound.org/product/info.jsp?isbn={{ isbn }}" target="_blank" class="{{ binding }} {{ include.classes }}">
+        <a href="http://www.indiebound.org/product/info.jsp?isbn={{ isbn }}" target="_blank" class="{{ binding }} {{ site.button-classes }}">
           Your Independent Bookstore
         </a>        
-        <a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN={{ isbn }}" target="_blank" class="{{ binding }} {{ include.classes }}">
+        <a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN={{ isbn }}" target="_blank" class="{{ binding }} {{ site.button-classes }}">
           Barnes & Noble
         </a>
         <span id='isbn10_{{ isbn }}'></span><!--  pulls in 10 digit ASIN for -->
@@ -42,7 +42,7 @@
     {% assign ebook =  editions | where_exp: "item", "item.binding == 'ebook'"  %}
     
     {% if ebook[0].isbn  %}    
-      <a href="http://itunes.apple.com/us/book/isbn{{ ebook[0].isbn }}" target="_blank" class="{{ ebook[0].binding }} {{ include.classes }}">
+      <a href="http://itunes.apple.com/us/book/isbn{{ ebook[0].isbn }}" target="_blank" class="{{ ebook[0].binding }} {{ site.button-classes }}">
         Apple iBooks
       </a>
     {% endif %}

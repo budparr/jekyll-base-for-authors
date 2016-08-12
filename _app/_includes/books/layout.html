@@ -1,7 +1,7 @@
-<header>
+<header class="col-12">
   {% if title %}
     <h1 class="book-title m0">
-      <a href="{{ url }}">
+      <a href="{{ url }}" class="text-decoration-none black hover-gray">
         {{ title|safe }}
       </a>
       {% if subtitle %}
@@ -22,29 +22,34 @@
     </h6>
   {% endif %}
 </header>
-{% if cover_image_path %}
-  <img class="book-cover" src="{{ cover_image_path }}" />
-{% endif %}
-{{ content | markdownify }}
-<ul class="listings" style="margin-bottom:4em;">
-  <li>
-    <strong>Publication Date: </strong>
-    {{ publication_date | date: "%b %-d, %Y" }}
-  </li>
-  {% for edition in editions | first %}
-    {% for binding in edition %}
-    <li>
-      <strong>ISBN {{ binding[0]}}</strong>: {{ binding[1] }}
-    </li>
-    {% endfor %}
-  {% endfor %}
-</ul>
 
-{% if editions %}
-  <div id="buying-information" class="clear">
+
+  <div class="col-12 sm-col sm-col-5 md-col lg-col md-col-5 lg-col-5 sm-pr2 md-pr2 lg-pr2">
+    {% if cover_image_path %}
+      <img class="book-cover" src="{{ cover_image_path }}" />
+    {% endif %}
+    {% if publication_date %}
+      <h5>
+        Publication Date: {{ publication_date | date: "%b %-d, %Y" }}
+      </h5>    
+    {% endif %}
+    
+    {% for edition in editions %}
+      <div class="col-12 mb1">
+        {{ site.bindings.[edition.binding] }}: {{ edition.isbn }}
+      </div>    
+    {% endfor %}
+  </div>
+
+<div class="col-12 sm-col sm-col-7 md-col lg-col md-col-7 lg-col-7 sm-pl2 md-pl2 lg-pl2">
+  {{ content | markdownify }}
+  {% if editions %}
+  <div id="buying-information" class="clearfix">
     {% include books/buy-links.html %}
   </div>
 {% endif %}
 {% if page.layout == 'book' %}
   {% include books/related-reviews.html %}
 {% endif %}
+
+</div>
