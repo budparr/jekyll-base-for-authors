@@ -3,6 +3,12 @@ layout: default
 schema: https://schema.org/WebPage
 ---
 
+<div class="clearfix col-12 px2">
+  {{ content }}
+</div>
+
+
+{% comment %}
 
 <div class="media flex-wrap">
   {% for post in site.posts  %}
@@ -13,3 +19,4 @@ schema: https://schema.org/WebPage
     </div>
   {% endfor %}
 </div>
+{% endcomment %}
