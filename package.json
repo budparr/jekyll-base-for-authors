@@ -12,7 +12,7 @@
     "clean:assets": "rm -rf assets",
     "copy:files": "rm -f 'assets/js/legacy/*' && copyfiles -f node_modules/flexibility/flexibility.js node_modules/html5shiv/dist/html5shiv.min.js assets/js/legacy && rm -rf assets/fonts/ && copyfiles -u 2 '_app/fonts/**/*.*' ./assets/fonts/",
     "uglify:jsjquery": "mkdir -p assets/js && uglifyjs _app/js/*.js -m -o assets/js/app.js && uglifyjs node_modules/jquery/dist/jquery.js _app/js/*.js -m -c -o assets/js/app.min.js",
-    "uglify:js": "mkdir -p assets/js && uglifyjs _app/js/site.js -m -o assets/js/app.js && uglifyjs node_modules/list.js/dist/list.js _app/js/*.js -m -c -o assets/js/app.min.js",
+    "uglify:js": "mkdir -p assets/js && uglifyjs _app/js/site.js -m -o assets/js/app.js",
     "uglify:js-listjs": "mkdir -p assets/js && uglifyjs _app/js/listjs.js -m -o assets/js/listjs.js && uglifyjs node_modules/list.js/dist/list.js _app/js/listjs.js -m -c -o assets/js/listjs.min.js",
     "uglify:js-lunrjs": "mkdir -p assets/js && uglifyjs _app/js/lunr.js -m -o assets/js/lunr.js && uglifyjs node_modules/lunr/lunr.js _app/js/lunr.js -m -c -o assets/js/lunr.min.js",
     "lint:js": "eslint _app/js",
