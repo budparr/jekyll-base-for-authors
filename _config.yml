@@ -6,9 +6,9 @@ author: []
 twitter:
   username: therealhermanmelville
 facebook:
-  app_id: 
-  publisher: 
-  admins: 
+  app_id:
+  publisher:
+  admins:
 logo: /uploads/cover-pachinko.jpg
 google_site_verification:
 github:
@@ -53,7 +53,7 @@ gems:
 plugins_dir:  ./_app/_plugins
 layouts_dir:  ./_app/_layouts
 includes_dir: ./_app/_includes
-paginate: 5
+paginate: 15
 paginate_path: "/posts/page:num/"
 permalink: pretty
 

@@ -11,17 +11,20 @@ layout: page-listing
 {% assign link_classes = 'block text-decoration-none hover-gray px2 py1 black hover-bg-black hover-white' %}
 {% assign box_classes = ' border rounded border-silver hover-bg-orange hover-white bg-transition' %}
 
-<div class="col col-12 sm-col-10 md-col-10 lg-col-10 sm-px1 pb4" id="filter">      
-  
+
+<div class="col col-12 sm-col-10 md-col-10 lg-col-3 sm-px1 pb4">
+  category
+</div>
+<div class="col col-12 sm-col-10 md-col-10 lg-col-7 sm-px1 pb4" id="filter">
+
   <div class="md-pr2 lg-pr2">
-    <div class="flex flex-wrap mxn2 list"> 
-      {% for object in posts limit: 10 %}
+    <div class="flex flex-wrap mxn2 list">
+      {% for object in posts %}
         {% assign date = object.date %}
-        {% include components/card-image-top.html classes=box_classes %}     
-      {% endfor %}        
+        {% include components/card-image-top.html classes=box_classes %}
+      {% endfor %}
     </div>
   </div>
 
   {% include components/pagination.html %}
 </div>
-
