@@ -20,21 +20,21 @@
     near-white
     silver
     light-gray
-    gray   
+    gray
     dark-gray
     black
-   
+
    // theme colors
-    dark-primary-color    (background-color)   
-    primary-color   (background-color)   
-    light-primary-color (background-color)   
-    text-primary-color     (color)    
-    accent-color            (background-color)   
-    primary-background-color (background-color)   
-    primary-text-color      (color)    
-    secondary-text-color   (color)     
-    disabled-text-color     (color)    
-    divider-color       (color)        
+    dark-primary-color    (background-color)
+    primary-color   (background-color)
+    light-primary-color (background-color)
+    text-primary-color     (color)
+    accent-color            (background-color)
+    primary-background-color (background-color)
+    primary-text-color      (color)
+    secondary-text-color   (color)
+    disabled-text-color     (color)
+    divider-color       (color)
 
 */
 
@@ -105,7 +105,7 @@ a { color: var(--brand-lighten)}
 .bg-dark-accent-color {background-color: var(--dark-accent-color)}
 .hover-bg-dark-accent-color:hover {background-color: var(--dark-accent-color)}
 
-.border-divider-color  { border-color: var(--divider-color); }
+.border-default-color  { border-color: var(--divider-color); }
 
 
 
@@ -114,26 +114,26 @@ a { color: var(--brand-lighten)}
 /* variables */
 :root {
 
-  
-  --near-white: #F8F8F8;  
+
+  --near-white: #F8F8F8;
   --silver: #DDDDDD;
   --gray:   #AAAAAA;
   --light-gray: #EEE;
   --dark-gray:  #333;
   --black:  #111111;
-    
+
     /* Material */
 
     /*NEXT FILL THESE IN WITH VALUES FROM GOOGLE MATERIAL NAMES
-        Then, make this a themeable thing? Generate themes? 
+        Then, make this a themeable thing? Generate themes?
     */
-    --dark-primary-color:           var(--palette-Blue-700);
-    --primary-color:                var(--palette-Blue-500);
-    --light-primary-color:          var(--palette-Blue-100);    
-    --text-primary-color:           var(--palette-White-500);
-    --accent-color:                 var(--palette-Pink-A200);
-    --light-accent-color:           var(--palette-Pink-A100);
-    --dark-accent-color:            var(--palette-Pink-A400);
+    --dark-primary-color:           var(--palette-Grey-700);
+    --primary-color:                var(--palette-Grey-500);
+    --light-primary-color:          var(--palette-Grey-100);
+    --text-primary-color:           var(--palette-Grey-100);
+    --accent-color:                 var(--palette-Blue-Grey-500);
+    --light-accent-color:           var(--palette-Blue-Grey-100);
+    --dark-accent-color:            var(--palette-Blue-Grey-800);
     --primary-text-color:           var(--palette-Grey-900);
     --secondary-text-color:         var(--palette-Grey-600);
     --disabled-text-color:          var(--palette-Grey-400);
@@ -141,6 +141,6 @@ a { color: var(--brand-lighten)}
 
     /*BassCSS overrides*/
 
-  --button-background-color: var(--purple); 
+  --button-background-color: var(--accent-color);
   --transparent:transparent;
 }
