@@ -79,6 +79,8 @@ exclude:
   - package.json
   - postcss.config.js
 
+future: true
+
 collections:
   landing_pages:
     output: true
