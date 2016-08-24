@@ -1,45 +1,31 @@
 ---
 layout: page-listing
 ---
+<div class="col-12 md-col-10 lg-col-9 mx-auto" id="filter">
+  {% if page.title %}
+    <h1 class="p3">
+      {{ page.title }}
+    </h1>
+  {% endif %}
 
-
-  <div class="md-col lg-col col-12 md-col-2 lg-col-3 py3 bg-light-primary-color">
-    <ul class="list-reset">
-      {% for category in site.categories %}
+  <ul class="list-reset mt0">
+    {% for object in site.events  %}
+      {% assign todays_date = site.time | date: "%Y%m%d" | to_integer %}
+      {% assign event_date = object.start_date | date: "%Y%m%d" | to_integer %}
+      {% assign date = object.start_date  %}
+      {% if event_date >= todays_date %}
         <li class="col-12">
-          <a href="/category/{{ category[0] | slugify }}" class="text-decoration-none primary-text-color hover-black px3 py2 hover-bg-primary-color">
-            {{ category[0] }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="md-col lg-col col-12 md-col-10 lg-col-9" id="filter">
-    {% if page.title %}
-      <h1 class="p3">
-        {{ page.title }}
-      </h1>
-    {% endif %}
-
-    <ul class="list-reset mt0">
-
-      {% for object in site.events  %}
-        {% assign todays_date = site.time | date: "%Y%m%d" | to_integer %}
-        {% assign event_date = object.start_date | date: "%Y%m%d" | to_integer %}
-        {% assign date = object.start_date  %}
-        {% if event_date >= todays_date %}
-          <li class="col-12 hover-bg-dark-primary-color px3 py2 mb3 border-bottom border-divider-color">
-            {% assign date = object.date %}
-            <a href="{{ object.url }}" class="text-decoration-none primary-text-color bold h2">
-              {{ object.title }}
-            </a>
-            {% if object.excerpt %}
-              {{ object.excerpt | markdownify }}
+          {% assign date = object.date %}
+          <a href="{{ object.url }}" class="text-decoration-none hover-bg-dark-primary-color hover-white  px3 py3 block primary-text-color bold border-bottom border-divider-color">
+            <span class="h2">{{ object.title }}</span>
+            {% if object.content %}
+              {{ object.content | markdownify }}
             {% endif %}
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+          </a>
 
-  </div>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+</div>

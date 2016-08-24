@@ -84,7 +84,8 @@ collections:
     output: true
     permalink: '/:path/'
   events:
-    output: false
+    output: true
+    permalink: '/event/:path/'
   books:
     output: true
     permalink: '/:collection/:path/'
@@ -122,7 +123,11 @@ defaults:
       schema: BlogPosting
       _comments:
         date: live on site date
-
+  - scope:
+      path: ''
+      type: events
+    values:
+      layout: page-single
 
 #design
 button-classes: ' btn btn-outline col-12 sm-col-auto md-col-auto lg-col-auto mb2 gray border-silver'
