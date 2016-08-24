@@ -5,10 +5,10 @@
   url: /events/
 
 - title: "News"
-  url: /posts/
+  url: /news/
 
 - title: "About"
   url: /about/
 
 - title: "Contact"
-  url: /contact/  
+  url: /contact/

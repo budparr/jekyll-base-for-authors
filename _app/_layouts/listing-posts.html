@@ -2,7 +2,15 @@
 layout: page-listing
 ---
 
-{% assign posts = paginator.posts %}
+{% if page.url contains 'category' %}
+
+  {% assign posts = page.posts %}
+
+{% else %}
+
+  {% assign posts = paginator.posts %}
+
+{% endif %}
 
 
 {% comment %}
@@ -12,19 +20,59 @@ layout: page-listing
 {% assign box_classes = ' border rounded border-silver hover-bg-orange hover-white bg-transition' %}
 
 
-<div class="col col-12 sm-col-10 md-col-10 lg-col-3 sm-px1 pb4">
-  category
-</div>
-<div class="col col-12 sm-col-10 md-col-10 lg-col-7 sm-px1 pb4" id="filter">
+<div class="col-12 clearfix">
 
-  <div class="md-pr2 lg-pr2">
-    <div class="flex flex-wrap mxn2 list">
-      {% for object in posts %}
-        {% assign date = object.date %}
-        {% include components/card-image-top.html classes=box_classes %}
+  <div class="md-col lg-col col-12 md-col-2 lg-col-3 p3 bg-primary-color">
+
+    <ul class="list-reset">
+      {% for category in site.categories %}
+        <li>
+          <a href="/category/{{ category[0] | slugify }}">
+            {{ category[0] }}
+          </a>
+        </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 
+
+
+
+  <div class="md-col lg-col col-12 md-col-10 lg-col-9" id="filter">
+
+      {% if page.title %}
+        <h1 class="p3">{{ page.title }}</h1>
+      {% endif %}
+
+
+      <ul class="list-reset mt0">
+        {% for object in posts %}
+          <li class="col-12 hover-bg-dark-primary-color px3 py2 mb3 border-bottom border-divider-color">
+            {% assign date = object.date %}
+
+                <a href="{{ object.url }}" class="text-decoration-none primary-text-color bold h2">
+                  {{ object.title }}
+                </a>
+
+              {% if object.excerpt %}
+                {{ object.excerpt | markdownify }}
+              {% endif %}
+          </li>
+
+
+
+        {% endfor %}
+      </ul>
+
+
+
+  </div>
+</div>
+<div class="col-12 clearfix">
+  <div class="col-12 lg-col lg-col-3">
+    <!-- PUSH-->&nbsp;
+  </div>
+    <div class="md-col lg-col col-12 md-col-10 lg-col-9 p2" id="filter">
   {% include components/pagination.html %}
+</div>
 </div>

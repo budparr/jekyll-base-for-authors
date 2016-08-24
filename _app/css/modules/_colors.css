@@ -32,6 +32,7 @@
     accent-color            (background-color)
     primary-background-color (background-color)
     primary-text-color      (color)
+    text-on-primary-color    (color)
     secondary-text-color   (color)
     disabled-text-color     (color)
     divider-color       (color)
@@ -40,38 +41,44 @@
 
 a { color: var(--brand-lighten)}
 .muted { opacity: .5 }
-
+.bg-red{ background-color: red}
 
 .white {color: var(--white)}
-.bg-white {background-color: var(--white)}
+/*.bg-white {background-color: var(--white)}
 .hover-bg-white:hover {background-color: var(--white)}
-.hover-white:hover {color: var(--white)}
+.hover-white:hover {color: var(--white)}*/
 
 .near-white {color: var(--near-white)}
+/*
+
 .bg-near-white {background-color: var(--near-white)}
 .hover-bg-near-white:hover {background-color: var(--near-white)}
 .hover-near-white:hover {color: var(--near-white)}
+*/
 
 .silver {color: var(--silver)}
 .bg-silver {background-color: var(--silver)}
 .hover-bg-silver:hover {background-color: var(--silver)}
 .hover-silver:hover {color: var(--silver)}
-
+/**/
+/*
 .light-gray {color: var(--light-gray)}
 .bg-light-gray {background-color: var(--light-gray)}
 .hover-bg-light-gray:hover {background-color: var(--light-gray)}
 .hover-light-gray:hover {color: var(--light-gray)}
-
+*/
+/*
 .gray {color: var(--gray)}
 .bg-gray {background-color: var(--gray)}
 .hover-bg-gray:hover {background-color: var(--gray)}
 .hover-gray:hover {color: var(--gray)}
-
+*/
+/*
 .dark-gray {color: var(--dark-gray)}
 .bg-dark-gray {background-color: var(--dark-gray)}
 .hover-bg-dark-gray:hover {background-color: var(--dark-gray)}
 .hover-dark-gray:hover {color: var(--dark-gray)}
-
+*/
 .black {color: var(--black)}
 .bg-black {background-color: var(--black)}
 .hover-bg-black:hover {background-color: var(--black)}
@@ -93,9 +100,11 @@ a { color: var(--brand-lighten)}
 .hover-dark-primary-color:hover {color: var(--dark-primary-color)}
 
 .primary-text-color  {color: var(--primary-text-color)}
+.text-on-primary-color  {color: var(--text-primary-color)}
 .secondary-text-color  {color: var(--secondary-text-color)}
 .disabled-text-color  {color: var(--disabled-text-color)}
 
+.accent-color {color: var(--accent-color)}
 .bg-accent-color {background-color: var(--accent-color)}
 .hover-bg-accent-color:hover {background-color: var(--accent-color)}
 
@@ -105,7 +114,10 @@ a { color: var(--brand-lighten)}
 .bg-dark-accent-color {background-color: var(--dark-accent-color)}
 .hover-bg-dark-accent-color:hover {background-color: var(--dark-accent-color)}
 
-.border-default-color  { border-color: var(--divider-color); }
+.border-divider-color  { border-color: var(--divider-color); }
+
+
+
 
 
 

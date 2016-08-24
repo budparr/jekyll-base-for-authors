@@ -50,12 +50,20 @@ gems:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-archives
 plugins_dir:  ./_app/_plugins
 layouts_dir:  ./_app/_layouts
 includes_dir: ./_app/_includes
 paginate: 15
-paginate_path: "/posts/page:num/"
+paginate_path: "/news/page:num/"
 permalink: pretty
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: 'listing-posts'
+  permalinks:
+    category: '/category/:name/'
 
 # CONTENT
 exclude:
