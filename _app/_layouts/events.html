@@ -1,44 +1,45 @@
 ---
-layout: default
+layout: page-listing
 ---
 
 
-<div class="{{ site.base-layout-classes-full }} pb4" id="filter">    
-  <h2>
-    Events
-  </h2>
-
-  {% assign box_classes = ' border col-12 rounded border-silver bg-transition' %}
-
-  <div class="md-pr2 lg-pr2">
-    <div class="flex flex-wrap mxn2 list"> 
-      {% for object in site.events  %}
-        {% assign todays_date = site.time | date: "%Y%m%d" | to_integer %}
-        {% assign event_date = object.start_date | date: "%Y%m%d" | to_integer %}
-        {% assign date = object.start_date  %}
-        {% if event_date >= todays_date %}        
-          {% include components/card.html classes=box_classes %}        
-        {% endif %}        
+  <div class="md-col lg-col col-12 md-col-2 lg-col-3 py3 bg-light-primary-color">
+    <ul class="list-reset">
+      {% for category in site.categories %}
+        <li class="col-12">
+          <a href="/category/{{ category[0] | slugify }}" class="text-decoration-none primary-text-color hover-black px3 py2 hover-bg-primary-color">
+            {{ category[0] }}
+          </a>
+        </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 
-  <div class="col-12 mt3">
-  <h2>
-    Past Events
-  </h2>
-    <div class="flex flex-wrap mxn2 list"> 
+  <div class="md-col lg-col col-12 md-col-10 lg-col-9" id="filter">
+    {% if page.title %}
+      <h1 class="p3">
+        {{ page.title }}
+      </h1>
+    {% endif %}
+
+    <ul class="list-reset mt0">
+
       {% for object in site.events  %}
         {% assign todays_date = site.time | date: "%Y%m%d" | to_integer %}
         {% assign event_date = object.start_date | date: "%Y%m%d" | to_integer %}
         {% assign date = object.start_date  %}
-      
-        {% if event_date <= todays_date %}        
-        
-          {% include components/card.html classes=box_classes %}        
+        {% if event_date >= todays_date %}
+          <li class="col-12 hover-bg-dark-primary-color px3 py2 mb3 border-bottom border-divider-color">
+            {% assign date = object.date %}
+            <a href="{{ object.url }}" class="text-decoration-none primary-text-color bold h2">
+              {{ object.title }}
+            </a>
+            {% if object.excerpt %}
+              {{ object.excerpt | markdownify }}
+            {% endif %}
+          </li>
         {% endif %}
       {% endfor %}
-    </div>
-  </div>  
+    </ul>
 
-</div>
+  </div>

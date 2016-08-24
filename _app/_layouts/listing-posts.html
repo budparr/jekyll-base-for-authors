@@ -20,20 +20,23 @@ layout: page-listing
 {% assign box_classes = ' border rounded border-silver hover-bg-orange hover-white bg-transition' %}
 
 
-<div class="col-12 clearfix">
 
-  <div class="md-col lg-col col-12 md-col-2 lg-col-3 p3 bg-primary-color">
+
+  <div class="md-col lg-col col-12 md-col-2 lg-col-3 py3 bg-light-primary-color">
 
     <ul class="list-reset">
       {% for category in site.categories %}
-        <li>
-          <a href="/category/{{ category[0] | slugify }}">
+        {% assign category_slug = category[0] | slugify  %}
+        <li class="col-12">
+          <a href="/category/{{ category_slug }}" class="right-align text-decoration-none block px4 py1 primary-text-color hover-white hover-bg-primary-color transition{% if page.url contains category_slug %} bg-primary-color{% endif %}">
             {{ category[0] }}
           </a>
         </li>
       {% endfor %}
     </ul>
+
   </div>
+
 
 
 
@@ -47,16 +50,19 @@ layout: page-listing
 
       <ul class="list-reset mt0">
         {% for object in posts %}
-          <li class="col-12 hover-bg-dark-primary-color px3 py2 mb3 border-bottom border-divider-color">
+          <li class="col-12 border-bottom border-divider-color">
             {% assign date = object.date %}
 
-                <a href="{{ object.url }}" class="text-decoration-none primary-text-color bold h2">
-                  {{ object.title }}
+                <a href="{{ object.url }}" class="text-decoration-none block px3 py2 primary-text-color hover-white hover-bg-dark-primary-color transition bold">
+                  <span class="h2">{{ object.title }}</span>
+
+
+                  {% if object.excerpt %}
+                    {{ object.excerpt | markdownify }}
+                  {% endif %}
                 </a>
 
-              {% if object.excerpt %}
-                {{ object.excerpt | markdownify }}
-              {% endif %}
+
           </li>
 
 
@@ -67,7 +73,7 @@ layout: page-listing
 
 
   </div>
-</div>
+
 <div class="col-12 clearfix">
   <div class="col-12 lg-col lg-col-3">
     <!-- PUSH-->&nbsp;
