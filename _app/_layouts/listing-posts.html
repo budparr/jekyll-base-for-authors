@@ -54,7 +54,7 @@ layout: page-listing
             {% assign date = object.date %}
 
                 <a href="{{ object.url }}" class="text-decoration-none block px3 py2 primary-text-color hover-white hover-bg-dark-primary-color transition bold">
-                  <span class="h2">{{ object.title }}</span>
+                  <span class="h2">{{ object.title | markdownify | remove: '<p>' | remove: '</p>' }}</span>
 
 
                   {% if object.excerpt %}
