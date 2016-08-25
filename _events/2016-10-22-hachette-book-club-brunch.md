@@ -2,7 +2,7 @@
 title: Hachette Book Club Brunch
 start_at: 2016-10-22T10:00:00.000Z
 venue:
-  name: HACHETTE BOOK GROUP
+  name: Hachette Book Group
   address: 1290 Avenue of the Americas
   city: New York
   state: NY
