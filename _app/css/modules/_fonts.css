@@ -11,7 +11,7 @@
 body {
   font-family: var(--font-primary);
   line-height: 1.5;
-  font-weight: 300;  
+  font-weight: 300;
 }
 
 p {
@@ -20,10 +20,9 @@ p {
   font-weight: 300;
 
 }
-
-.font-family-brand { font-family: var(--font-brand) } 
-.font-family-primary { font-family: var(--font-primary) } 
+.font-family-sans { font-family: var(--font-primary-sans) } 
+.font-family-brand { font-family: var(--font-brand) }
+.font-family-primary { font-family: var(--font-primary) }
 .font-spaced { letter-spacing: var(--caps-letter-spacing) }
 .font-light-weight { font-weight: var(--light-font-weight) }
 .text-shadow-black { text-shadow: 1px 1px 0px #000000; }
-
