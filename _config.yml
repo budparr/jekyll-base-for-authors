@@ -130,6 +130,10 @@ defaults:
       type: events
     values:
       layout: page-single
+      _comments:
+        title: Event Description
+        venue: Venue name. Address is optional
+
 
 #design
 button-classes: ' btn btn-outline col-12 sm-col-auto md-col-auto lg-col-auto mb2 gray border-silver'
