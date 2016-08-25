@@ -2,8 +2,8 @@
 title: Savannah Book Festival 2017
 
 link: "http://www.savannahbookfestival.org"
-address:
-  address1:
+venue:
+  address:
   city: "Savannah"
   state:
   zip:
