@@ -3,6 +3,7 @@ title: Savannah Book Festival 2017
 
 link: "http://www.savannahbookfestival.org"
 venue:
+  name:
   address:
   city: "Savannah"
   state:
