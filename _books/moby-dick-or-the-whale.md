@@ -14,6 +14,8 @@ editions:
 reviews:
   - attribution: Herman Melville
     copy_markdown: "It is the horrible texture of a fabric that should be woven of ships' cables and hawsers. A Polar wind blows through it, and birds of prey hover over it."
+  - attribution: Test
+    copy_markdown: this is some copy
 cover_image_path: /uploads/delete-cover-moby.jpg
 ---
 
