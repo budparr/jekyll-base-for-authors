@@ -26,6 +26,18 @@ layout: page-listing
             {% if object.content %}
               {{ object.content | markdownify }}
             {% endif %}
+
+
+            {% if object.venue %}
+
+            {{ object.venue.name}}
+
+
+
+            {% endif %}
+
+
+
           </a>
 
         </li>
