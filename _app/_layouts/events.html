@@ -27,17 +27,11 @@ layout: page-listing
               {{ object.content | markdownify }}
             {% endif %}
 
-
-            {% if object.venue %}
-
-            {{ object.venue.name}}
-
-
-
+            {% if object.venue %}<br />
+              <div class="font-family-sans">
+                {% include events/venue.html %}
+              </div>
             {% endif %}
-
-
-
           </a>
 
         </li>

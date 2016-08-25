@@ -1,13 +1,13 @@
 ---
 title: "Hachette Book Club Brunch"
-link: "http://www.bookclubbrunch.com"
+start_at: 2016-10-22T10:00:00Z
 venue:
   name: HACHETTE BOOK GROUP
   address: 1290 Avenue of the Americas
   city: New York
   state: NY
   zip:
-start_at: 2016-10-22T10:00:00Z
+link: "http://www.bookclubbrunch.com"
 ---
 Hachette Book Group’s 5th Annual Book Club Brunch
 
