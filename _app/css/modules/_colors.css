@@ -44,8 +44,9 @@ a { color: var(--brand-lighten)}
 .bg-red{ background-color: red}
 
 .white {color: var(--white)}
-/*bg-white {background-color: var(--white)}
+/*
 .hover-bg-white:hover {background-color: var(--white)}*/
+bg-white {background-color: var(--white)}
 .hover-white:hover {color: var(--white)}
 
 .near-white {color: var(--near-white)}
