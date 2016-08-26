@@ -1,0 +1,55 @@
+---
+layout: default
+section: experiment
+---
+{% assign section_classes_main = 'clearfix col-12 height-100 p4 border border-divider-color' %}
+{% assign section_classes_left = 'lg-col col-12 lg-col-5 height-100 p4' %}
+{% assign section_classes_right = 'lg-col col-12 lg-col-7 height-100 p4 border' %}
+<main class="clearfix">
+
+  <section id="section-1" class="bg-red {{ section_classes_main }}">
+
+      <div class="{{ section_classes_left }}">
+        <h1>Section 1 introduction</h1>
+      </div>
+
+    <div class="{{ section_classes_right }}">
+      <aside class="col-12">
+          <h1>Section 1-1</h1>
+          {% include copy.html %}
+      </aside>
+
+      <aside class="bg-white col-12">
+          <h1>Section 1-2</h1>
+          {% include copy.html %}
+      </aside>
+
+    </div>
+
+    <hr />
+  </section>
+
+
+
+  <section id="section-2" class="bg-dark-primary-color {{ section_classes_main }}">
+
+      <div class="{{ section_classes_left }}">
+        <h1>Section 2 introduction</h1>
+      </div>
+
+    <div class="{{ section_classes_right }}">
+      <aside class="col-12">
+          <h1>Section 2-1</h1>
+          {% include copy.html %}
+      </aside>
+
+      <aside class="bg-white col-12">
+          <h1>Section 2-2</h1>
+          {% include copy.html %}
+      </aside>
+
+    </div>
+  </section>
+
+
+</main>
