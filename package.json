@@ -1,6 +1,6 @@
 {
   "name": "jekyll-base-for-authors",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "Base Jekyll Starter",
   "main": "index.html",
   "scripts": {
@@ -9,25 +9,19 @@
     "version:patch": "npm version patch -m 'bump version for fixes minor changes'",
     "clean:assets": "rm -rf assets",
     "copy:files": "rm -f 'assets/js/legacy/*' && copyfiles -f node_modules/flexibility/flexibility.js node_modules/html5shiv/dist/html5shiv.min.js assets/js/legacy && rm -rf assets/fonts/ && copyfiles -u 2 '_app/fonts/**/*.*' ./assets/fonts/",
-
     "uglify:js-jquery": "mkdir -p assets/js && uglifyjs _app/js/*.js -m -o assets/js/app.js && uglifyjs node_modules/jquery/dist/jquery.js node_modules/waypoints/lib/jquery.waypoints.js node_modules/waypoints/src/shortcuts/sticky.js _app/js/*.js -m -c -o assets/js/app.min.js",
     "uglify:js": "mkdir -p assets/js && uglifyjs _app/js/site.js -m -o assets/js/app.js",
     "uglify:js-listjs": "mkdir -p assets/js && uglifyjs _app/js/listjs.js -m -o assets/js/listjs.js && uglifyjs node_modules/list.js/dist/list.js _app/js/listjs.js -m -c -o assets/js/listjs.min.js",
     "uglify:js-lunrjs": "mkdir -p assets/js && uglifyjs _app/js/lunr.js -m -o assets/js/lunr.js && uglifyjs node_modules/lunr/lunr.js _app/js/lunr.js -m -c -o assets/js/lunr.min.js",
     "lint:js": "eslint --fix _app/js",
     "build:js-withlink": "npm run lint:js && npm run uglify:js-jquery && run uglify:js-listjs && npm run uglify:js-lunrjs",
-
     "build:js": "npm run uglify:js-jquery && run uglify:js-listjs && npm run uglify:js-lunrjs",
     "watch:js": "onchange '_app/js/*.js' -- npm run uglify:js-jquery",
-
     "compress:img": "imagemin _app/images assets/images -p",
     "watch:img": "onchange '_app/images/**/*.*' -- npm run compress:img",
-
-
     "build:css": "postcss -c _app/css/postcss.config.js",
     "hotbuild:css": "copyfiles -f assets/css/* _site/assets/css",
     "watch:css": "onchange '_app/css/**/*.css' -- run-s build:css hotbuild:css",
-
     "clean:jekyll": "bundle exec jekyll clean",
     "build:jekyll": "bundle exec jekyll build",
     "watch:jekyll": "onchange '_app/_includes/**/*' '_app/_layouts/**/*' '**/*.md' '_data/*.*' -- run-s build:jekyll reload",
