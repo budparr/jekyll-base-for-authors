@@ -1,1 +1,0 @@
-$.each(["chapter","np-right"],function(e,n){var t=$("."+n);t.each(function(){new Waypoint({element:this,handler:function(e){var n=this.previous();var s=this.next();t.removeClass("np-previous np-current np-next");$(this.element).addClass("np-current");if(n){$(n.element).addClass("np-previous")}if(s){$(s.element).addClass("np-next")}},offset:"10%",group:n})})});
