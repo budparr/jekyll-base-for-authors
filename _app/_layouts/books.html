@@ -8,6 +8,7 @@ layout: default
     {% assign url = object.url %}
     {% assign subtitle = object.subtitle %}
     {% assign genre = object.genre %}
+    {% assign description_markdown = object.description_markdown %}
     {% assign cover_image_path = object.cover_image_path %}
     {% assign publication_date = object.publication_date %}
     {% assign editions = object.editions %}
@@ -17,5 +18,3 @@ layout: default
       {% include books/layout.html %}
     </article>
   {% endfor %}
-
-

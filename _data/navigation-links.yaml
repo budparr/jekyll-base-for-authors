@@ -1,14 +1,23 @@
-- title: "Books"
-  url: /books/
+# - title: "*Killers of the Flower Moon*"
+#   url: /books/killers-of-the-flower-moon/
+#
+# - title: "*The Devil and Sherlock Holmes*"
+#   url: /books/the-devil-and-sherlock-holmes/
+#
+# - title: "*The Lost City of Z*"
+#   url: /books/lost-city-of-z/
 
-- title: "Events"
-  url: /events/
+# - title: Events
+#   url: /events/
 
-- title: "News"
-  url: /news/
-
-- title: "About"
+- title: About
   url: /about/
 
-- title: "Contact"
+- title: Books
+  url: /books/
+
+- title: Contact
   url: /contact/
+
+- title: "Press & News"
+  url: /news/

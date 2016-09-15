@@ -39,7 +39,7 @@
 
 */
 
-a { color: var(--brand-lighten)}
+a { color: var(--accent-color)}
 .muted { opacity: .5 }
 .bg-red{ background-color: red}
 
@@ -50,6 +50,7 @@ a { color: var(--brand-lighten)}
 .hover-white:hover {color: var(--white)}
 
 .near-white {color: var(--near-white)}
+.bg-near-white {background-color: var(--near-white)}
 /*
 
 .bg-near-white {background-color: var(--near-white)}

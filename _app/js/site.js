@@ -1,35 +1,21 @@
-/* global sticky Waypoint:true*/
-/* eslint-env jquery */
-// var sticky = new Waypoint.Sticky({
-//   element: $('.chapter')[0]
-// });
 
-//
-// $.each(['chapter', 'np-right'], function(i, classname) {
-//   var $elements = $('.' + classname)
-//
-//   $elements.each(function() {
-//     new Waypoint({
-//
-//       element: this,
-//
-//       handler: function(direction) {
-//         var previousWaypoint = this.previous()
-//         var nextWaypoint = this.next()
-//
-//         $elements.removeClass('np-previous np-current np-next')
-//         $(this.element).addClass('np-current')
-//         if (previousWaypoint) {
-//           $(previousWaypoint.element).addClass('np-previous')
-//         }
-//         if (nextWaypoint) {
-//           $(nextWaypoint.element).addClass('np-next')
-//         }
-//       },
-//
-//
-//       offset: '10%',
-//       group: classname
-//     })
-//   })
-// })
+// init Packery
+var grid = document.querySelector('.grid');
+var pckry = new Packery( grid, {
+  itemSelector: '.grid-item',
+  percentPosition: true
+});
+// layout Packery after each image loads
+imagesLoaded( grid ).on( 'progress', function() {
+  pckry.layout();
+});
+
+
+smoothScroll.init({
+    selector: 'a', // Selector for links (must be a class, ID, data attribute, or element tag)
+    selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+    speed: 900, // Integer. How fast to complete the scroll in milliseconds
+    easing: 'easeInOutCubic', // Easing pattern to use
+    offset: 100, // Integer. How far to offset the scrolling anchor location in pixels
+    callback: function ( anchor, toggle ) {} // Function to run after scrolling
+});

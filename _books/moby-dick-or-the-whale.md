@@ -5,12 +5,12 @@ publication_date: 2017-02-07T00:00:00.000Z
 genre: fiction
 description_markdown: '*Moby-Dick* is the story of an eerily compelling madman pursuing an unholy war against a creature as vast and dangerous and unknowable as the sea itself. But more than just a novel of adventure, more than an encyclopedia of whaling lore and legend, *Moby-Dick* is a haunting, mesmerizing, and important social commentary populated with several of the most unforgettable and enduring characters in literature.'
 editions:
-  - binding: paperback
-    isbn: 9780451532282
   - binding: hardcover
-    isbn: 9780143124672
+    isbn: '9780143124672'
+  - binding: paperback
+    isbn: '9780451532282'
   - binding: ebook
-    isbn: 9781101637715
+    isbn: '9781101637715'
 reviews:
   - attribution: Herman Melville
     copy_markdown: "It is the horrible texture of a fabric that should be woven of ships' cables and hawsers. A Polar wind blows through it, and birds of prey hover over it."

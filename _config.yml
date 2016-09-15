@@ -1,7 +1,7 @@
 # jekyll-seo-tag
 title: "Herman Melville"
-description: "Official Author site for Herman Melville"
-url: "http://www.jekyll-base-for-authors-thenewdynamic.com" # the base hostname & protocol for your site
+description: Official Author site for  Herman Melville
+url: "http://www.thenewdynamic.org" # the base hostname & protocol for your site
 author: []
 twitter:
   username: therealhermanmelville
@@ -9,11 +9,11 @@ facebook:
   app_id:
   publisher:
   admins:
-logo: /uploads/cover-pachinko.jpg
+logo: /uploads/delete-cover-moby.jpg
 google_site_verification:
 github:
   username: budparr
-owner: Herman Melville
+owner: David Grann
 # manifest
 short_name: Herman Melville
 display: fullscreen
@@ -23,17 +23,38 @@ bindings:
   paperback: Paperback
   ebook: Ebook
   special: Special Edition
+
+genres:
+  fiction: Fiction
+  nonfiction: Nonfiction
+  poetry: Poetry
+  theater: Theater
+
 # bindings:
 #   - hardcover
 #   - paperback
 #   - ebook
 #   - special
 
+navigation-links:
+  - title: "Books"
+    url: /books/
+
+  - title: "Events"
+    url: /events/
+
+  - title: "News"
+    url: /news/
+
+  - title: "About"
+    url: /about/
+
+  - title: "Contact"
+    url: /contact/
 
 # development meta data
 image_url: http://thenewdynamic.imgix.net
 google_analytics_id: UA-xxxxx-4
-version: 3.0.3
 incremental: false
 #port: 3575
 
@@ -46,10 +67,13 @@ timezone: Etc/Zulu
 #   ignore:
 #     envs: [development]
 #   profile: false
+
+
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-admin
   - jekyll-archives
 plugins_dir:  ./_app/_plugins
 layouts_dir:  ./_app/_layouts
@@ -91,9 +115,12 @@ collections:
   books:
     output: true
     permalink: '/:collection/:path/'
-  genres:
+  image_galleries:
     output: false
-    permalink: '/:collection/:path/'
+    _hide_content: true
+  # genres:
+  #   output: false
+  #   permalink: '/:collection/:path/'
 
 defaults:
   - scope:
@@ -116,6 +143,7 @@ defaults:
       type: posts
     values:
       layout: page-single
+      category: News
       schema: BlogPosting
   - scope:
       path: ''
@@ -130,16 +158,49 @@ defaults:
       type: events
     values:
       layout: page-single
+      category: Events
       _comments:
         title: Event Description
         venue: Venue name. Address is optional
 
 
+
 #design
-button-classes: ' btn btn-outline col-12 sm-col-auto md-col-auto lg-col-auto mb2 gray border-silver'
+button-classes: ' btn btn-outline col-12 sm-col-auto md-col-auto lg-col-auto mb2 gray border-silver hover-bg-black hover-white transition'
 base-layout-classes: ' mx3 sm-mx3 md-mx-auto lg-mx-auto lg-col-6 py2 lg-p3'
 base-layout-classes-wide: ' clearfix mx3 sm-mx3 md-mx-auto lg-mx-auto lg-col-9 py2 lg-p3'
 base-layout-classes-full: ' col-12 px3'
+
+
+fonts_loaded: "'Vesper+Libre:400,500,900'"
+font-heading: "'Vesper Libre', 'Merriweather', Georgia, Cambria, 'Times New Roman', Times, serif;"
+font-primary: "'Vesper Libre', 'Merriweather', Georgia, Cambria, 'Times New Roman', Times, serif;"
+#font-primary: "'Open Sans', 'Avenir Next', 'Lato','Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',sans-serif;"
+font-small: "'Open Sans', 'Avenir Next', 'Lato','Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',sans-serif;"
+font-weight-heavy: '900'
+
+# COLORS
+white: "#FFF"
+near-white: "#F8F8F8"
+silver: "#DDDDDD"
+gray:   "#AAAAAA"
+light-gray: "#EEE"
+dark-gray:  "#333"
+black:  "#111111"
+
+
+primary-color-dark:   "#111"
+primary-color:        "#607D8B"
+primary-color-light:  "#CFD8DC"
+primary-color-text:   "#FFFFFF"
+accent-color:  "#D32F2F" #       "#455A64"
+primary-text-color:   "#212121"
+secondary-text-color: "#757575"
+divider-color:        "#BDBDBD"
+
+button-background-color: #var(accent-color)
+transparent: transparent
+
 
 
 states:

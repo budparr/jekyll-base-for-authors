@@ -1,78 +1,42 @@
 ---
 layout: page-listing
 ---
-
 {% if page.url contains 'category' %}
-
   {% assign posts = page.posts %}
-
 {% else %}
-
   {% assign posts = paginator.posts %}
-
 {% endif %}
-
-
 {% comment %}
 {% assign posts = posts | sort: 'date', 'last' | reverse  %}
 {% endcomment %}
-{% assign link_classes = 'block text-decoration-none hover-gray px2 py1 black hover-bg-black hover-white' %}
-{% assign box_classes = ' border rounded border-silver hover-bg-orange hover-white bg-transition' %}
-
-
-
-
-  <div class="md-col lg-col col-12 md-col-2 lg-col-3 py3 bg-light-primary-color">
-
-    <ul class="list-reset">
-      {% for category in site.categories %}
-        {% assign category_slug = category[0] | slugify  %}
-        <li class="col-12">
-          <a href="/category/{{ category_slug }}" class="right-align text-decoration-none block px4 py1 primary-text-color hover-white hover-bg-primary-color transition{% if page.url contains category_slug %} bg-primary-color{% endif %}">
-            {{ category[0] }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-
-  </div>
-
-
-
 
 
   <div class="md-col lg-col col-12 md-col-10 lg-col-9" id="filter">
 
-      {% if page.title %}
-        <h1 class="p3">{{ page.title }}</h1>
-      {% endif %}
+    {% if page.title %}
+      <h1 class="p3">{{ page.title | capitalize | replace: '-', ' ' }}</h1>
+    {% endif %}
 
+    {% unless page.url contains '/category/' %}
+      {% include events/events-listing.html %}
+    {% endunless %}
 
-      <ul class="list-reset mt0">
-        {% for object in posts %}
-          <li class="col-12 border-bottom border-divider-color">
-            {% assign date = object.date %}
-
-                <a href="{{ object.url }}" class="text-decoration-none block px3 py2 primary-text-color hover-white hover-bg-dark-primary-color transition bold">
-                  <span class="h2">{{ object.title | markdownify | remove: '<p>' | remove: '</p>' }}</span>
-
-
-                  {% if object.excerpt %}
-                    {{ object.excerpt | markdownify }}
-                  {% endif %}
-                </a>
-
-
-          </li>
-
-
-
-        {% endfor %}
-      </ul>
-
-
-
+    {% for object in posts %}
+      {% assign date = object.date %}
+      <a href="{{ object.url }}" class="col-12 border-bottom border-divider-color p3 text-decoration-none block py2 secondary-text-color hover-white hover-bg-primary-color transition">
+        <time class="h6 mute col-12">{{ object.date | date_to_string }}</time><br />
+        <span class="h1 primary-text-color">
+          {{ object.title | markdownify | remove: '<p>' | remove: '</p>' }}<br />
+        </span>
+        {% if object.excerpt %}
+          {{ object.excerpt | markdownify | strip_html }}
+        {% endif %}
+      </a>
+    {% endfor %}
   </div>
+
+
+
 
 <div class="col-12 clearfix">
   <div class="col-12 lg-col lg-col-3">

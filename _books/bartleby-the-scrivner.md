@@ -6,7 +6,7 @@ genre:
 description_markdown: '“I prefer not to,” he respectfully and slowly said, and mildly disappeared.'
 editions:
   - binding: paperback
-    isbn: 9780974607801
+    isbn: '9780974607801'
 reviews:
   - attribution: The New Yorker
     copy_markdown: 'I’ve always been haunted by *Bartleby*, the proto-slacker. But it’s the handsomely minimalist cover of the Melville House edition that gets me here, one of many in the small publisher’s fine ‘Art of the Novella’ series.'

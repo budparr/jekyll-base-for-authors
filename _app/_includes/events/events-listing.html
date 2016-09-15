@@ -1,0 +1,30 @@
+    {% assign events = "" | split: "|" %}
+    {% for item in site.events %}
+      {% assign current_date = site.time | date: "%Y%m%d"  %}
+      {% assign postdate = item.start_at | date: "%Y%m%d"  %}
+      {% if postdate > current_date %}
+        {% assign events = events | push: item %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign upcoming_events = events | sort: 'date', 'last' | reverse  %}
+
+    {% for object in upcoming_events limit: 10  %}
+    {% assign date = object.start_at %}
+    <a href="{{ object.url }}" class="col-12 border-bottom border-divider-color p3 text-decoration-none block py2 secondary-text-color hover-white hover-bg-primary-color transition">
+      {% if object.start_at %}
+        <time datetime="{{ object.date | date_to_xmlschema }}" itemprop="datePublished" class="block font-family-sans accent-color">
+          Event: {{ object.start_at | date: "%b %-d, %Y" }}
+        </time>
+      {% endif %}
+      <span class="h1 black">{{ object.title }}</span>
+      {% if object.content %}
+        {{ object.content | markdownify }}
+      {% endif %}
+      {% if object.venue %}<br />
+        <div class="font-family-sans">
+          {% include events/venue.html %}
+        </div>
+      {% endif %}
+    </a>
+    {% endfor %}

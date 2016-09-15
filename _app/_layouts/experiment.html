@@ -2,20 +2,20 @@
 layout: default
 section: experiment
 ---
-{% assign section_classes_main = ' clearfix relative col-12 height-100' %}
+{% assign section_classes_main = ' clearfix relative col-12 height-100 p3' %}
 
 {% assign section_classes_left = ' relative lg-col col-12 lg-col-5 lg-height-100 pr3 lg-fp4' %}
 
-{% assign chapter_classes = ' chapter border-box transition transform p3' %}
+{% assign chapter_classes = ' chapter border-box transition transform' %}
 <!-- lg-absolute lg-left-0 lg-top-0 lg-right-0 fit col-12 lg-col-10 bg-silfver m2  -->
 
-{% assign section_classes_right = ' lg-col col-12 lg-col-7 height-100 lg-p4 borderTK' %}
+{% assign section_classes_right = ' lg-col col-12 lg-col-7 height-100 p2 lg-p4 borderTK' %}
 
 <main class="clearfix">
 
-  <section id="section-1" class="bg-red{{ section_classes_main }}">
+  <section id="section-1" class="{{ section_classes_main }}">
 
-      <div class="{{ section_classes_left }}">
+      <div class="bg-red{{ section_classes_left }}">
 
         <div class="{{ chapter_classes }}">
             <h1>Section 1 introduction</h1>
@@ -24,7 +24,7 @@ section: experiment
 
       </div>
 
-    <div class="bg-white{{ section_classes_right }}">
+    <div class="{{ section_classes_right }}">
       <aside class="col-12">
           <h1>Section 1-1</h1>
           {% include copy.html %}
@@ -59,9 +59,9 @@ section: experiment
 
 
 
-  <section id="section-2" class="bg-dark-primary-color{{ section_classes_main }}">
+  <section id="section-2" class="{{ section_classes_main }}">
 
-      <div class="{{ section_classes_left }}">
+      <div class="bg-dark-primary-color {{ section_classes_left }}">
 
         <div class="{{ chapter_classes }}">
           <h1>
@@ -71,7 +71,7 @@ section: experiment
         </div>
       </div>
 
-    <div class="bg-primary-color{{ section_classes_right }}">
+    <div class="{{ section_classes_right }}">
       <aside class="col-12">
           <h1>Section 2-1</h1>
           {% include copy.html %}
@@ -88,9 +88,9 @@ section: experiment
 
 
 
-  <section id="section-3" class="bg-white{{ section_classes_main }}">
+  <section id="section-3" class="{{ section_classes_main }}">
 
-      <div class="{{ section_classes_left }}">
+      <div class="bg-white{{ section_classes_left }}">
 
         <div class="{{ chapter_classes }}">
             <h1>Section 3 introduction</h1>
@@ -99,7 +99,7 @@ section: experiment
 
       </div>
 
-    <div class="bg-red{{ section_classes_right }}">
+    <div class="{{ section_classes_right }}">
       <aside class="col-12">
           <h1>Section 3-1</h1>
           {% include copy.html %}

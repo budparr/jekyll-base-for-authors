@@ -15,7 +15,7 @@
 @import 'modules/_shadows';
 
 /* OVERRIDES */
-@import 'modules/_colors';
+/*@import 'modules/_colors';*/
 @import 'modules/_fonts';
 /*@import 'modules/_debug';*/
 
@@ -26,3 +26,7 @@
   }
 }
 a.btn { margin-bottom:.5em }
+
+.text-decoration-none > a {
+  text-decoration: none;
+}
