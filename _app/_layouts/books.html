@@ -14,7 +14,7 @@ layout: default
     {% assign editions = object.editions %}
     {% assign pubdate = object.publication_date | date: "%Y%m%d" %}
     {% assign editions = object.editions %}
-    <article class="hentry{% if page.class %} {{page.class}}{% endif %}{{ site.base-layout-classes-wide }} clearfix mb4">
+    <article class="hentry{% if page.class %} {{page.class}}{% endif %}{{ site.base-layout-classes-wide }} clearfix">
       {% include books/layout.html %}
     </article>
     <div class="{{ site.base-layout-classes-wide }} mb3">
