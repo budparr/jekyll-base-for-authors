@@ -13,7 +13,7 @@
     {% assign date = object.start_at %}
     <a href="{{ object.url }}" class="col-12 border-bottom border-divider-color p3 text-decoration-none block py2 secondary-text-color hover-white hover-bg-primary-color transition">
       {% if object.start_at %}
-        <time datetime="{{ object.date | date_to_xmlschema }}" itemprop="datePublished" class="block font-family-sans accent-color">
+        <time datetime="{{ object.start_at | date_to_xmlschema }}" itemprop="datePublished" class="block font-family-sans accent-color">
           Event: {{ object.start_at | date: "%b %-d, %Y" }}
         </time>
       {% endif %}
